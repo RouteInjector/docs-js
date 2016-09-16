@@ -1,0 +1,1098 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Schema | Route Injector</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../models/injector.html" />
+    
+    
+    <link rel="prev" href="../models/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.1"
+        data-chapter-title="Schema"
+        data-filepath="models/schema.md"
+        data-basepath=".."
+        data-revision="Tue Apr 12 2016 18:18:05 GMT+0200 (CEST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="installation/index.html">
+            
+                
+                    <a href="../installation/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Installation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="installation/prerequisites.html">
+            
+                
+                    <a href="../installation/prerequisites.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Prerequisites
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="installation/generator.html">
+            
+                
+                    <a href="../installation/generator.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Generator
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="installation/folders.html">
+            
+                
+                    <a href="../installation/folders.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Folder structure
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="tutorial/index.html">
+            
+                
+                    <a href="../tutorial/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Tutorial
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="tutorial/step1.html">
+            
+                
+                    <a href="../tutorial/step1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Step 1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="tutorial/step2.html">
+            
+                
+                    <a href="../tutorial/step2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Step 2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="tutorial/step3.html">
+            
+                
+                    <a href="../tutorial/step3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Step 3
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="configuration/index.html">
+            
+                
+                    <a href="../configuration/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Configuration
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="configuration/environment.html">
+            
+                
+                    <a href="../configuration/environment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Environment
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="configuration/application.html">
+            
+                
+                    <a href="../configuration/application.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Application
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="configuration/auth.html">
+            
+                
+                    <a href="../configuration/auth.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Auth
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="configuration/backoffice.html">
+            
+                
+                    <a href="../configuration/backoffice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Backoffice
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="configuration/bootstrap.html">
+            
+                
+                    <a href="../configuration/bootstrap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Bootstrap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="configuration/globals.html">
+            
+                
+                    <a href="../configuration/globals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Globals
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="configuration/log.html">
+            
+                
+                    <a href="../configuration/log.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Log
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="configuration/routes.html">
+            
+                
+                    <a href="../configuration/routes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        Routes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="configuration/session.html">
+            
+                
+                    <a href="../configuration/session.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="configuration/swagger.html">
+            
+                
+                    <a href="../configuration/swagger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Swagger
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="models/index.html">
+            
+                
+                    <a href="../models/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Models
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1" data-path="models/schema.html">
+            
+                
+                    <a href="../models/schema.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Schema
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="models/injector.html">
+            
+                
+                    <a href="../models/injector.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Injector
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="models/functions.html">
+            
+                
+                    <a href="../models/functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="models/references.html">
+            
+                
+                    <a href="../models/references.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="models/denormalize.html">
+            
+                
+                    <a href="../models/denormalize.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Denormalization
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="models/dependencies.html">
+            
+                
+                    <a href="../models/dependencies.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Dependencies
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="routes/index.html">
+            
+                
+                    <a href="../routes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Routes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="routes/default.html">
+            
+                
+                    <a href="../routes/default.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Default routes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="routes/custom.html">
+            
+                
+                    <a href="../routes/custom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Custom routes
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="backoffice/index.html">
+            
+                
+                    <a href="../backoffice/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Backoffice
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="backoffice/folders.html">
+            
+            <span><b>6.1.</b> Folders</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="backoffice/newtypes.html">
+            
+                
+                    <a href="../backoffice/newtypes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Adding new types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="backoffice/overrideDir.html">
+            
+            <span><b>6.3.</b> Overriding directives</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="backoffice/overrideSer.html">
+            
+            <span><b>6.4.</b> Overriding services</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="plugins/index.html">
+            
+                
+                    <a href="../plugins/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Plugins
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="plugins/create.html">
+            
+                
+                    <a href="../plugins/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Creating a plugin
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="pages/index.html">
+            
+                
+                    <a href="../pages/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Pages
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="pages/backoffice.html">
+            
+                
+                    <a href="../pages/backoffice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Backoffice
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="pages/standalone.html">
+            
+                
+                    <a href="../pages/standalone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Standalone
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="typebased/index.html">
+            
+                
+                    <a href="../typebased/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        TypeBased
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="typebased/references.html">
+            
+                
+                    <a href="../typebased/references.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="typebased/references_with_arrays.html">
+            
+                
+                    <a href="../typebased/references_with_arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        Arrays with References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="typebased/arrays.html">
+            
+                
+                    <a href="../typebased/arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        Arrays
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="devel/index.html">
+            
+                
+                    <a href="../devel/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Development
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="devel/rest.html">
+            
+                
+                    <a href="../devel/rest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        Adding a new REST primitive
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Route Injector</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="schema-file">Schema file</h1>
+<p>This is the main file that defines a model. It represents the schema, i.e the list of fields (and its types) that the model will have.</p>
+<h2 id="mongoose-types">Mongoose types</h2>
+<p>Route Injector supports the following Mongoose types:</p>
+<h4 id="string">String</h4>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">String</span>},
+otherWay: <span class="hljs-built_in">String</span>
+</code></pre>
+<h4 id="number">Number</h4>
+<pre><code class="lang-javascript">number: {type: <span class="hljs-built_in">Number</span>},
+otherWay: <span class="hljs-built_in">Number</span>
+</code></pre>
+<h4 id="date">Date</h4>
+<pre><code class="lang-javascript">date: {type: <span class="hljs-built_in">Date</span>},
+otherWay: <span class="hljs-built_in">Date</span>
+</code></pre>
+<h4 id="array">Array</h4>
+<pre><code class="lang-javascript">myArray:[<span class="hljs-built_in">String</span>],
+otherWay: [{type: <span class="hljs-built_in">String</span>}]
+</code></pre>
+<h4 id="mixed">Mixed</h4>
+<pre><code class="lang-javascript">mixedType: {type: mongoose.Schema.Types.Mixed}
+</code></pre>
+<p>As well as embedded types, for example:</p>
+<pre><code class="lang-javascript">var schema = new Schema({
+    name:
+    {
+        displayName: {type: String, class: &apos;col-md-4&apos;},
+        firstName:{type: String, class: &apos;col-md-4&apos;},
+        lastName: {type: String, class: &apos;col-md-4&apos;}
+    },
+    location:
+    {
+        address: { type: String, class: &apos;col-md-12&apos;},
+        zip: { type: String, class: &apos;col-md-3&apos;},
+        town:{ type: String, class: &apos;col-md-3&apos;},
+        state: { type: String, class: &apos;col-md-3&apos;},
+        country: { type: String, class: &apos;col-md-3&apos;}
+    }
+});
+</code></pre>
+<p>You can also define specific subschemas that can be reusable.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> stepSchema = <span class="hljs-keyword">new</span> Schema({
+        description: {type: <span class="hljs-built_in">String</span>, format: <span class="hljs-string">&apos;textarea&apos;</span>, rows: <span class="hljs-number">5</span>},
+        cookTime: {type: <span class="hljs-built_in">Number</span>, title: <span class="hljs-string">&quot;Cook Time (in seconds)&quot;</span>}
+    },
+    { id: <span class="hljs-literal">false</span>, _id: <span class="hljs-literal">false</span> }
+);
+
+<span class="hljs-keyword">var</span> groupSchema = <span class="hljs-keyword">new</span> Schema({
+        name: {type: <span class="hljs-built_in">String</span>},
+        steps: [stepSchema]
+    }, 
+    { id: <span class="hljs-literal">false</span>, _id: <span class="hljs-literal">false</span> }
+);
+
+<span class="hljs-keyword">var</span> schema = <span class="hljs-keyword">new</span> Schema({
+        title: {type: <span class="hljs-built_in">String</span>},
+        groups: [groupSchema]
+}
+</code></pre>
+<h2 id="other-types">Other Types</h2>
+<p>Route Injector also provides a few additional types not included in Mongoose.</p>
+<h4 id="rimage">RImage</h4>
+<pre><code class="lang-javascript">image: injector.types.RImage
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>The behaviour of this types can be modified by using additional attributes. For adding attributes you should use the extended type field declaration as shown in the next example:</p>
+<pre><code class="lang-javascript">text: {type:<span class="hljs-built_in">String</span>, <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">attribute</span>&gt;</span>}
+</span></code></pre>
+<p>The available attributes are:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Applies to types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#title">title</a></td>
+<td>Title for the field (if not present uses a humanized version of field name)</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#description">description</a></td>
+<td>Additional description for the field</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#required">required</a></td>
+<td>If the field is mandatory or not</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#readonly">readonly</a></td>
+<td>If the field is read only or not</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#unique">unique</a></td>
+<td>If the field value must be unique in the collection or not</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#default">default</a></td>
+<td>Default value of the field</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#format">format</a></td>
+<td>Specifies a format for the type, for example HTML or Textarea</td>
+<td>String, Number</td>
+</tr>
+<tr>
+<td><a href="#class">class</a></td>
+<td>CSS style for the container of the field</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#fieldClass">fieldClass</a></td>
+<td>CSS style fot the field</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="#minValue">minValue</a></td>
+<td>Minimal value of the field</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><a href="#maxValue">maxValue</a></td>
+<td>Maximum value of the field</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><a href="#min">min</a></td>
+<td>Minimal value of the field</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><a href="#max">max</a></td>
+<td>Maximum value of the field</td>
+<td>Number</td>
+</tr>
+<tr>
+<td><a href="#enum">enum</a></td>
+<td>Allowed values</td>
+<td>String, Number</td>
+</tr>
+<tr>
+<td><a href="#map">map</a></td>
+<td>Allowed values and their representable names</td>
+<td>String, Number</td>
+</tr>
+<tr>
+<td><a href="#rows">rows</a></td>
+<td>Number of rows in the textarea</td>
+<td>String (Textarea)</td>
+</tr>
+<tr>
+<td><a href="#limitToOptions">limitToOptions</a></td>
+<td>If the values in the enum are recommended or mandatory</td>
+<td>String, Number (Enum)</td>
+</tr>
+<tr>
+<td><a href="references.html">ref</a></td>
+<td>Specifies which other model this field references</td>
+<td>All</td>
+</tr>
+<tr>
+<td><a href="denormalize.html">denormalize</a></td>
+<td>Specifies how to denormalize the field (copy values from the referenced one)</td>
+<td>Mixed</td>
+</tr>
+<tr>
+<td><a href="dependencies.html">dependsOn</a></td>
+<td>Specifies how to udate the field when a related field is modified</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<p>TODO What&apos;s the correct max or maxValue ???</p>
+<h3 id="class"><a name="class"></a>class</h3>
+<p>This attribute specifies an additional CSS style for the the container of the field.</p>
+<pre><code class="lang-javascript">rank: {type: String, class: &quot;hidden&quot;, readonly: true}
+</code></pre>
+<p>This example adds a rank field of type string that will not be shown, and as a safety measure is also readonly.</p>
+<pre><code class="lang-javascript">phone: {type: Number, class: &apos;col-md-6&apos;}
+</code></pre>
+<p>The second example is a field of type number that uses the Bootstrap class col-md-6 for nice formatting of the backoffice.</p>
+<h3 id="fieldclass"><a name="fieldClass"></a>fieldClass</h3>
+<p>This attribute specifies an additional CSS style for the the field.</p>
+<p>TODO: Example</p>
+<h3 id="format"><a name="format"></a>format</h3>
+<p>The format attributes allow to specify specific visualizations for general types like string or number. The allowed values (without any additional plugin) are: <a href="#html">html</a>, <a href="#textarea">textarea</a>, <a href="#rating">rating</a>, <a href="#time-seconds">time-seconds</a> and <a href="#button">button</a>.</p>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">String</span>, format: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Attribute</span>&gt;</span>}
+</span></code></pre>
+<h4 id="html"><a name="html"></a>html</h4>
+<p>This format allows to render a string field as an small HTML editor on the backoffice.</p>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">String</span>, format: <span class="hljs-string">&apos;html&apos;</span>}
+</code></pre>
+<h4 id="textarea"><a name="textarea"></a>textarea</h4>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">String</span>, format: <span class="hljs-string">&apos;textarea&apos;</span>, rows: <span class="hljs-number">5</span>}
+</code></pre>
+<h4 id="rating"><a name="rating"></a>rating</h4>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">Number</span>, format: <span class="hljs-string">&apos;rating&apos;</span>, minValue:<span class="hljs-number">1</span>, maxValue: <span class="hljs-number">3</span>}
+</code></pre>
+<h4 id="timeseconds"><a name="time-seconds"></a>time-seconds</h4>
+<pre><code class="lang-javascript">name: {type: <span class="hljs-built_in">Number</span>, format: <span class="hljs-string">&apos;time-seconds&apos;</span>}
+</code></pre>
+<h4 id="button"><a name="button"></a>button</h4>
+<pre><code class="lang-javascript">action1: {type: <span class="hljs-built_in">String</span>, format: <span class="hljs-string">&apos;button&apos;</span>, action:<span class="hljs-string">&apos;api&apos;</span>, method:<span class="hljs-string">&apos;GET&apos;</span>, url:<span class="hljs-string">&apos;/my/url&apos;</span>, title: <span class="hljs-string">&apos;Call api function&apos;</span>}
+action2: {type: <span class="hljs-built_in">String</span>, format: <span class="hljs-string">&apos;button&apos;</span>, action:<span class="hljs-string">&apos;function&apos;</span>,  func: <span class="hljs-string">&apos;insideFunction&apos;</span>}
+</code></pre>
+<h3 id="modifiers">Modifiers</h3>
+<h4 id="readonly">readonly</h4>
+<h4 id="unique">unique</h4>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../models/index.html" class="navigation navigation-prev " aria-label="Previous page: Models"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../models/injector.html" class="navigation navigation-next " aria-label="Next page: Injector"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
