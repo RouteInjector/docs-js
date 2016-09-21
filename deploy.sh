@@ -28,7 +28,7 @@ ssh-add travis_deploy
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 cd /tmp/gh-pages
-
+git init
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
