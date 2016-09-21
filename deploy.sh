@@ -32,6 +32,7 @@ ssh-add travis_deploy
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 cd /tmp/gh-pages
+rm travis_deploy* .travis.yml deploy.sh
 git init
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
@@ -41,4 +42,4 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Now that we're all set up, we can push.
 git remote add origin $SSH_REPO
-git push --force --quiet $SSH_REPO $TARGET_BRANCH
+git push origin master:refs/heads/gh-pages --force
