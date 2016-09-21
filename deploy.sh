@@ -11,6 +11,10 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 
+# Save some useful information
+REPO=`git config remote.origin.url`
+SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+
 # Run our compile script
 mkdir /tmp/gh-pages
 gitbook build $(pwd) /tmp/gh-pages
@@ -36,4 +40,5 @@ git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Now that we're all set up, we can push.
+git remote add origin $SSH_REPO
 git push --force --quiet $SSH_REPO $TARGET_BRANCH
