@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- node
+before_install:
+- openssl aes-256-cbc -K $encrypted_d44a906b5fe9_key -iv $encrypted_d44a906b5fe9_iv
+  -in travis_deploy.enc -out travis_deploy -d
+- npm -g install gitbook-cli
+script:
+- "./deploy.sh"
