@@ -111,12 +111,9 @@ The available attributes are:
 | [maxValue](#maxValue)             | Maximum value of the field                                                    | Number                             |
 | [min](#min)                       | Minimal value of the field                                                    | Number                             |
 | [max](#max)                       | Maximum value of the field                                                    | Number                             |
-| [enum](#enum)                     | Allowed values                                                                | String, Number
-              |
-| [enumUrl](#enumUrl)               | Allowed values obtained from a HTTP GET                                       | String, Number 
-              |
-| [separator](#separator)           | When using enum selector, character that separates group from text            | String, Number 
-              |
+| [enum](#enum)                     | Allowed values                                                                | String, Number                     |
+| [enumUrl](#enumUrl)               | Allowed values obtained from a HTTP GET                                       | String, Number                     |
+| [separator](#separator)           | When using enum selector, character that separates group from text            | String, Number                     |
 | [map](#map)                       | Allowed values and their representable names                                  | String, Number                     |
 | [rows](#rows)                     | Number of rows in the textarea                                                | String (Textarea)                  |
 | [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | Boolean, Number (Enum)              |
