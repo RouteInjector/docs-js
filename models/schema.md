@@ -111,10 +111,15 @@ The available attributes are:
 | [maxValue](#maxValue)             | Maximum value of the field                                                    | Number                             |
 | [min](#min)                       | Minimal value of the field                                                    | Number                             |
 | [max](#max)                       | Maximum value of the field                                                    | Number                             |
-| [enum](#enum)                     | Allowed values                                                                | String, Number                     |
+| [enum](#enum)                     | Allowed values                                                                | String, Number
+              |
+| [enumUrl](#enumUrl)               | Allowed values obtained from a HTTP GET                                       | String, Number 
+              |
+| [separator](#separator)           | When using enum selector, character that separates group from text            | String, Number 
+              |
 | [map](#map)                       | Allowed values and their representable names                                  | String, Number                     |
 | [rows](#rows)                     | Number of rows in the textarea                                                | String (Textarea)                  |
-| [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | String, Number (Enum)              |
+| [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | Boolean, Number (Enum)              |
 | [ref](./references.md)            | Specifies which other model this field references                             | All                                |
 | [denormalize](./denormalize.md)   | Specifies how to denormalize the field (copy values from the referenced one)  | Mixed                              | 
 | [dependsOn](./dependencies.md)    | Specifies how to udate the field when a related field is modified             | All                                |
@@ -175,6 +180,31 @@ name: {type: Number, format: 'time-seconds'}
 action1: {type: String, format: 'button', action:'api', method:'GET', url:'/my/url', title: 'Call api function'}
 action2: {type: String, format: 'button', action:'function',  func: 'insideFunction'}
 ```
+
+####<a name="separator"></a>separator
+
+Enables selector grouping by choosing the character that separates group from name. See [this example](#enumUrl). 
+
+####<a name="enumUrl"></a>enumUrl
+```javascript
+tags: [
+  {
+     type: String,
+     separator: '/',
+     limitToOptions: false,
+     enumUrl: "https://{{region}}.myserver.com/tags?type=raw"
+   }
+]
+```
+This example shows how to get the enum values from the specified URL. Angular substitutions can be used, and enum values can be limited or no to these results. In this example, also a separator is used for nicer formating the selector.
+
+The returned file from the HTTP GET method should have the following format. 
+
+```javascript
+["Group 1/Tag 1","Group 1/Tag 2","Group 1/Tag 3", "Group 2/Tag 4", "Group 3/Tag 5"]
+```
+
+Notice that each string is composed of a group plus a text separated by '/'. This groups the different options in the selector. The grouping is enabled by selecting the separator character with the separator option.
 
 ### Modifiers
 #### readonly
