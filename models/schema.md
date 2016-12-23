@@ -206,3 +206,39 @@ Notice that each string is composed of a group plus a text separated by '/'. Thi
 ### Modifiers
 #### readonly
 #### unique
+
+## TODO
+
+### DynEnum
+
+Document dynEnum / dynMap difference with enumUrl ??? 
+
+Seems that dynEnum shows a classic selector instead of select2
+
+```javascript
+code: {type: String, dynEnum: "/api/get-url-codes"},
+```
+
+The format of /api/get-url-codes is:
+```javascript
+[
+  "home",
+  "staticPage",
+  "post",
+  "blogCategory",
+  "blog",
+  "privacyPolicy",
+  "404"
+]
+```
+
+### Format map with selectors
+
+|widget                      | when it is selected                                                                             |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| select2                    | when exists ref                                                                                 |
+| simple-select2             | when exists map or dynEnum or dynMap                                                            |
+| multiselect                | when type is array and items.type is string and exists items.enum or items.map or items.enumUrl |           
+| select (angularschemaform) | when type is string and exists enum (1)                                                         | 
+
+(1) Seems that types can be forced [https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md#overriding-field-types-and-order](https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md#overriding-field-types-and-order)
