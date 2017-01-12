@@ -14,6 +14,7 @@ fi
 # Save some useful information
 REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+COMMIT_AUTHOR_EMAIL=`git show -s --format=%ae`
 
 # Run our compile script
 mkdir /tmp/gh-pages
