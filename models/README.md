@@ -16,4 +16,6 @@ Relationships between your models can be implemented with three diferent mechani
 
 [Denormalization](./denormalize.md) allows to improve the performance of your system in some cases. The idea is to keep a copy of the most common fields of the referenced model in a mixed field of the model. This way when you retrieve the model typically you don't need to access the referenced model, so GET operation is typically faster. On the other hand when you modify fields on the referenced model you have to "propagate" this changes to all the denormalized copies, so updates will be more expensive. The usage of references or denormalized references will depend on the expected API usage of your model.
 
-Finally, [dependencies](./dependencies.md) allow to make fields depend on other fields. For example if you modify the country in a form, probably the city should be modified also. Dependency mechanism tries to make this automatic in the backoffice. 
+Finally, [dependencies](./dependencies.md) allow to make fields depend on other fields. For example if you modify the country in a form, probably the city should be modified also. Dependency mechanism tries to make this automatic in the backoffice.
+
+In the [Howto](../howto/README.md) section you can also find some ideas of how to configure the models.
