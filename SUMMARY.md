@@ -45,3 +45,4 @@
     * [Arrays](typebased/arrays.md)
 * [Development](devel/README.md)
     * [Adding a new REST primitive](devel/rest.md)
+* [Howto](howto/README.md)
