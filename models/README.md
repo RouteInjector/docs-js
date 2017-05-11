@@ -8,6 +8,20 @@ Depending on the complexity of your models you will need different files:
 * [injector.js](./injector.md)
 * [functions.js](./functions.md)
 
+In addition to this files, an index.js should be in each model folder.
+
+```
+module.exports.modelName = 'User';
+module.exports.collection = 'my_users';
+module.exports.schema = require('./schema').getSchema();
+```
+This file basically loads the schema and provides basic information for the model:
+
+* modelName: This is the name of the model. 
+* schema: This is the JSON schema of the model, typically required from the schema.js file.
+* collection: This optional field allows to specify the name of the Mongo collection to use. This can be used also for having two schemas that use the same collection. [This technique](http://stackoverflow.com/questions/14453864/use-more-than-one-schema-per-collection-on-mongodb) allows to generate multiple "views" from the same collection hiding the unnecessary information. 
+* baseModel: This optional field can be used to generate discriminator models. See this [example](https://github.com/RouteInjector/demo-js/tree/master/demo/mo/person). 
+
 ## Relationships
 
 Relationships between your models can be implemented with three diferent mechanisms: references, denormalized references and dependencies.

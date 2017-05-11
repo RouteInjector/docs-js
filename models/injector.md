@@ -192,7 +192,7 @@ The available hooks are:
   ```
 * __Pre database__: Array of methods executed just before the access to the database. Each method must follow the syntax below
   ```javascript
-  myPreMiddleware = function(req, res, next){
+  myPreMiddleware = function(Model, req, res, next){
     //Do some stuff here
     next();
   }
@@ -203,7 +203,9 @@ The available hooks are:
   myPostMiddleware = function(config, req, res, doc, next){
     //In config is stored the injector configuration of the route
     //Do some stuff with the doc and the configuration here
-    next(doc);
+    
+    // If first argument of next is not null, an error has occured
+    next(null, config, req, res, doc);
   }
   ```
 
