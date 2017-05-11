@@ -102,6 +102,7 @@ The available attributes are:
 | [description](#description)       | Additional description for the field                                          | All                                |
 | [required](#required)             | If the field is mandatory or not                                              | All                                |
 | [readonly](#readonly)             | If the field is read only or not                                              | All                                |
+| [editOnCreate](#editOnCreate)     | When true, field is writable when creating element but readonly when editing. | All                                |
 | [unique](#unique)                 | If the field value must be unique in the collection or not                    | All                                |
 | [default](#default)               | Default value of the field                                                    | All                                |
 | [format](#format)                 | Specifies a format for the type, for example HTML or Textarea                 | String, Number                     |
@@ -116,14 +117,14 @@ The available attributes are:
 | [separator](#separator)           | When using enum selector, character that separates group from text            | String, Number                     |
 | [map](#map)                       | Allowed values and their representable names                                  | String, Number                     |
 | [rows](#rows)                     | Number of rows in the textarea                                                | String (Textarea)                  |
-| [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | Boolean, Number (Enum)              |
+| [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | Boolean, Number (Enum)             |
 | [ref](./references.md)            | Specifies which other model this field references                             | All                                |
-| [denormalize](./denormalize.md)   | Specifies how to denormalize the field (copy values from the referenced one)  | Mixed                              | 
+| [denormalize](./denormalize.md)   | Specifies how to denormalize the field (copy values from the referenced one)  | Mixed                              |
 | [dependsOn](./dependencies.md)    | Specifies how to udate the field when a related field is modified             | All                                |
 
 TODO What's the correct max or maxValue ???
 
-###<a name="class"></a>class
+### <a name="class"></a>class
 This attribute specifies an additional CSS style for the the container of the field.
 
 ```javascript
@@ -136,13 +137,13 @@ phone: {type: Number, class: 'col-md-6'}
 ```
 The second example is a field of type number that uses the Bootstrap class col-md-6 for nice formatting of the backoffice.
 
-###<a name="fieldClass"></a>fieldClass
+### <a name="fieldClass"></a>fieldClass
 
 This attribute specifies an additional CSS style for the the field.
 
 TODO: Example
 
-###<a name="format"></a>format
+### <a name="format"></a>format
 
 The format attributes allow to specify specific visualizations for general types like string or number. The allowed values (without any additional plugin) are: [html](#html), [textarea](#textarea), [rating](#rating), [time-seconds](#time-seconds) and [button](#button).
 
@@ -150,39 +151,39 @@ The format attributes allow to specify specific visualizations for general types
 name: {type: String, format: <Attribute>}
 ```
 
-####<a name="html"></a>html
+#### <a name="html"></a>html
 This format allows to render a string field as an small HTML editor on the backoffice.
 
 ```javascript
 name: {type: String, format: 'html'}
 ```
 
-####<a name="textarea"></a>textarea
+#### <a name="textarea"></a>textarea
 ```javascript
 name: {type: String, format: 'textarea', rows: 5}
 ```
 
-####<a name="rating"></a>rating
+#### <a name="rating"></a>rating
 ```javascript
 name: {type: Number, format: 'rating', minValue:1, maxValue: 3}
 ```
 
-####<a name="time-seconds"></a>time-seconds
+#### <a name="time-seconds"></a>time-seconds
 ```javascript
 name: {type: Number, format: 'time-seconds'}
 ```
 
-####<a name="button"></a>button
+#### <a name="button"></a>button
 ```javascript
 action1: {type: String, format: 'button', action:'api', method:'GET', url:'/my/url', title: 'Call api function'}
 action2: {type: String, format: 'button', action:'function',  func: 'insideFunction'}
 ```
 
-####<a name="separator"></a>separator
+#### <a name="separator"></a>separator
 
 Enables selector grouping by choosing the character that separates group from name. See [this example](#enumUrl). 
 
-####<a name="enumUrl"></a>enumUrl
+#### <a name="enumUrl"></a>enumUrl
 ```javascript
 tags: [
   {
@@ -211,7 +212,7 @@ Notice that each string is composed of a group plus a text separated by '/'. Thi
 
 ### DynEnum
 
-Document dynEnum / dynMap difference with enumUrl ??? 
+Document dynEnum / dynMap difference with enumUrl ???
 
 Seems that dynEnum shows a classic selector instead of select2
 
@@ -238,7 +239,7 @@ The format of /api/get-url-codes is:
 |----------------------------|-------------------------------------------------------------------------------------------------|
 | select2                    | when exists ref                                                                                 |
 | simple-select2             | when exists map or dynEnum or dynMap                                                            |
-| multiselect                | when type is array and items.type is string and exists items.enum or items.map or items.enumUrl |           
-| select (angularschemaform) | when type is string and exists enum (1)                                                         | 
+| multiselect                | when type is array and items.type is string and exists items.enum or items.map or items.enumUrl |
+| select (angularschemaform) | when type is string and exists enum (1)                                                         |
 
 (1) Seems that types can be forced [https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md#overriding-field-types-and-order](https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md#overriding-field-types-and-order)
