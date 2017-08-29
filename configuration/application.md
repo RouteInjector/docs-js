@@ -14,7 +14,8 @@ The order of the statics array is the order that will be applied in express stat
 * __view_engine__: Engine to use for frontend page rendering 
 * __enableCors__: Enable Cross-Origin Resource Sharing (CORS) that enables open access across domain-boundaries
 * __notFound__: How to process 404 errors. If not set, a simple JSON message is shown. If set to a URL, then you are redirected to it. If set to 'disabled' no process is done, so this behaviour can be set in main startup file (bin/www).
-  
+* __json_limit__: Enable to change size limit to json body-parser (Default 100kb).
+
 ## Example
 ```javascript
 module.exports = {
@@ -28,7 +29,8 @@ module.exports = {
         }
     ],
     view_engine: 'jade',
-    enableCors: true
+    enableCors: true,
+    json_limit: { limit: '200kb' }
 };
 ```
 
