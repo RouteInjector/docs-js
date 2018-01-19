@@ -18,5 +18,7 @@ This framework has been designed and programmed by [Alteraid](http://www.alterai
 - Eric Lara <e.lara@ondho.com>
 - Ariadna Ginjaume <ariadna@ondho.com>
 - Òscar Villacampa <oscar@ondho.com>
+- Álex Baena <a.baena@ondho.com>
+
 
 
