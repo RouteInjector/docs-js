@@ -107,7 +107,7 @@ The available formats of file are:
 * __Excel__: Standard Microsoft Excel format
 
 ##### Import API
-Ipmorts a collection
+Imports a collection
 
 The available formats of file are:
 * __CSV__: Standard CSV format
