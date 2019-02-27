@@ -206,7 +206,10 @@ Notice that each string is composed of a group plus a text separated by '/'. Thi
 
 ### Modifiers
 #### readonly
+If true, the backoffice does not allow to modify this field, see also [editOnCreate](#editOnCreate).
+
 #### unique
+If true, [unique](https://docs.mongodb.com/manual/core/index-unique/) notifies Mongo that this index should contain unique, i.e non repeated values.
 
 ## TODO
 
