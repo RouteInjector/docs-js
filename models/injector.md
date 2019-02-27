@@ -91,7 +91,7 @@ A basic query of a search POST is:
 ```javascript
 {
     query: { name: 'bill'},
-    lmit: 10,
+    limit: 10,
     skip: 10,
     sortBy: "field"
 }
