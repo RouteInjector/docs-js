@@ -179,6 +179,37 @@ action1: {type: String, format: 'button', action:'api', method:'GET', url:'/my/u
 action2: {type: String, format: 'button', action:'function',  func: 'insideFunction'}
 ```
 
+#### <a name="enum"></a>enum
+
+Allows to choose among a fixed set of options.
+
+```javascript
+region: {
+    type: String,
+    required: true,
+    enum: ['Spain','France','UK']
+}
+```
+
+It can also be get from an external file:
+
+```javascript
+region: {
+    type: String,
+    required: true,
+    enum: require("./../elements/regions.js"),
+}
+```
+In this case the enum values can be fixed but computed.
+```javascript
+// regions can be computed in the javascript file
+var regions = [
+  'REG1',
+  'REG2'];
+
+module.exports = regions;
+```
+
 #### <a name="separator"></a>separator
 
 Enables selector grouping by choosing the character that separates group from name. See [this example](#enumUrl). 
@@ -203,6 +234,47 @@ The returned file from the HTTP GET method should have the following format.
 ```
 
 Notice that each string is composed of a group plus a text separated by '/'. This groups the different options in the selector. The grouping is enabled by selecting the separator character with the separator option.
+
+#### <a name="map"></a>map
+
+Map is similar to enum but allows to specify the both the shown value in the backoffice and also the stored value in the database.
+
+```javascript
+unit: {
+  type: String,
+  class: "col-md-2",
+  map: require("../elements/units.json"),
+}
+```
+The json stores the database values as keys and the shown values in the ```name``` field. It is also possible to specify a ```group``` field to group the different 
+
+```javascript
+{
+    "": {"name": "No Unit", "group": "Units"},
+    "u": {"name": "Units (u)", "group":"Units"},
+    "gr": {"name": "Grams (gr)", "group": "Units"},
+    "l": {"name": "Litres (l)", "group": "Units"},
+    "ml": {"name": "Mililitres (ml)", "group": "Units"},
+    "tbsp": {"name": "Table spoon (tbsp)", "group": "Units"},
+    "tsp": {"name": "Tea spoon (tsp)", "group": "Units"},
+    "cp": {"name": "Cup (cp)", "group": "Units"},
+    "mc": {"name": "Measure cup (mc)", "group": "Units"},
+    "coy": {"name": "Cup of yogurt (coy)", "group": "Units"},
+    "pch": {"name": "Pinch (pch)", "group": "Units"},
+    "drp": {"name": "Drops (drp)", "group": "Units"},
+    "scht": {"name": "Sachet (scht", "group": "Units"},
+    "pkt": {"name": "Packets (pkt)", "group":"Units"},
+
+    "gra": {"name": "Grains (gra)", "group": "Other Units"},
+    "clv": {"name": "Cloves (clv)", "group": "Other Units"},
+    "stk": {"name": "Sticks (stk)", "group": "Other Units"},
+    "bch": {"name": "Bunch(s) (bch)", "group": "Other Units"},
+    "brch": {"name": "Branches (brch)", "group": "Other Units"},
+    "lea": {"name": "Leaf(ves) (lea)", "group": "Other Units"},
+    "slc": {"name": "Slices (slc)", "group": "Other Units"},
+    "tur": {"name": "Tours (tur)", "group": "Other Units"}
+}
+```
 
 ### Modifiers
 #### readonly
