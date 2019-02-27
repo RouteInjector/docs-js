@@ -40,6 +40,12 @@ user: {
 It is also possible to use denormalize to reference a different identifier in the referenced model. The following example uses niceName as an additional identifier.
 
 ```javascript
+category: { type: String, ref: "Category", denormalize: "niceName" }
+```
+
+This also works inside an array:
+
+```javascript
 favorites: [{ type: String, ref: "Recipe", denormalize: "niceName" }]
 ```
 
@@ -50,7 +56,7 @@ This will be stored in the database as this:
   "arroz-con-pollo",    
   "ternera-en-salsa-strogonoff-variante"
 ]
-```
+``` 
 
 ## Plain denormalization
 
