@@ -120,6 +120,7 @@ The available attributes are:
 | [limitToOptions](#limitToOptions) | If the values in the enum are recommended or mandatory                        | Boolean, Number (Enum)             |
 | [ref](./references.md)            | Specifies which other model this field references                             | All                                |
 | [denormalize](./denormalize.md)   | Specifies how to denormalize the field (copy values from the referenced one)  | Mixed                              |
+| [propagate](./denormalize.md)     | Specifies if changes in referenced fields must be propagated to this field.   | Mixed                              |
 | [dependsOn](./dependencies.md)    | Specifies how to udate the field when a related field is modified             | All                                |
 
 TODO What's the correct max or maxValue ???
