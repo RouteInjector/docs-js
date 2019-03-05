@@ -1,13 +1,19 @@
 language: node_js
 node_js:
 - node
-# blocklist
 branches:
   except:
   - gh-pages
 before_install:
-- openssl aes-256-cbc -K $encrypted_d44a906b5fe9_key -iv $encrypted_d44a906b5fe9_iv
-  -in travis_deploy.enc -out travis_deploy -d
 - npm -g install gitbook-cli
 script:
-- "./deploy.sh"
+- "./build.sh"
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  commiter-from-gh: true,
+  local-dir: ./gh-pages
+  on:
+    branch: master
