@@ -35,7 +35,7 @@ if (STORE_ACTIVE) {
 routeinjector.start(function () {
   if(STORE_ACTIVE){
     // Adds voucher.code to the injector definition of the ri-store plugin :)
-    Order.injector().extraDisplayFields .push("voucher.code");
+    Order.injector().extraDisplayFields.push("voucher.code");
     
     // Also valid
     Order.injector().extraDisplayFields = ["state", "total", "customerValue.email", "date", "customerValue.name", "customerValue.lastName", "voucher.code"];
