@@ -152,7 +152,7 @@ The format attributes allow to specify specific visualizations for general types
 ```javascript
 name: {type: String, format: <Attribute>}
 ```
-#### <a name="url"></a>html
+#### <a name="url"></a>url
 This format allows to render a string field as an URL link on the backoffice list. The prefix is added to the string to generate the URL, if the string value is `my-post` and the `prefix` is `/` the URL of the link will be `/my-post`.
 
 ```javascript
