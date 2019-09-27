@@ -1,0 +1,1112 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Adding a new REST primitive · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../howto/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../installation/prerequisites.html">
+            
+                <a href="../installation/prerequisites.html">
+            
+                    
+                    Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../installation/generator.html">
+            
+                <a href="../installation/generator.html">
+            
+                    
+                    Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../installation/folders.html">
+            
+                <a href="../installation/folders.html">
+            
+                    
+                    Folder structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../tutorial/">
+            
+                <a href="../tutorial/">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../tutorial/step1.html">
+            
+                <a href="../tutorial/step1.html">
+            
+                    
+                    Step 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../tutorial/step2.html">
+            
+                <a href="../tutorial/step2.html">
+            
+                    
+                    Step 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../tutorial/step3.html">
+            
+                <a href="../tutorial/step3.html">
+            
+                    
+                    Step 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../configuration/">
+            
+                <a href="../configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../configuration/environment.html">
+            
+                <a href="../configuration/environment.html">
+            
+                    
+                    Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../configuration/application.html">
+            
+                <a href="../configuration/application.html">
+            
+                    
+                    Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../configuration/auth.html">
+            
+                <a href="../configuration/auth.html">
+            
+                    
+                    Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../configuration/backoffice.html">
+            
+                <a href="../configuration/backoffice.html">
+            
+                    
+                    Backoffice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../configuration/bootstrap.html">
+            
+                <a href="../configuration/bootstrap.html">
+            
+                    
+                    Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../configuration/globals.html">
+            
+                <a href="../configuration/globals.html">
+            
+                    
+                    Globals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../configuration/log.html">
+            
+                <a href="../configuration/log.html">
+            
+                    
+                    Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../configuration/routes.html">
+            
+                <a href="../configuration/routes.html">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../configuration/session.html">
+            
+                <a href="../configuration/session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../configuration/swagger.html">
+            
+                <a href="../configuration/swagger.html">
+            
+                    
+                    Swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../models/">
+            
+                <a href="../models/">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../models/schema.html">
+            
+                <a href="../models/schema.html">
+            
+                    
+                    Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../models/injector.html">
+            
+                <a href="../models/injector.html">
+            
+                    
+                    Injector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../models/functions.html">
+            
+                <a href="../models/functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../models/references.html">
+            
+                <a href="../models/references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../models/denormalize.html">
+            
+                <a href="../models/denormalize.html">
+            
+                    
+                    Denormalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../models/dependencies.html">
+            
+                <a href="../models/dependencies.html">
+            
+                    
+                    Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../routes/">
+            
+                <a href="../routes/">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../routes/default.html">
+            
+                <a href="../routes/default.html">
+            
+                    
+                    Default routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../routes/custom.html">
+            
+                <a href="../routes/custom.html">
+            
+                    
+                    Custom routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../backoffice/">
+            
+                <a href="../backoffice/">
+            
+                    
+                    Backoffice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../backoffice/folders.md">
+            
+                <span>
+            
+                    
+                    Folders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../backoffice/newtypes.html">
+            
+                <a href="../backoffice/newtypes.html">
+            
+                    
+                    Adding new types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../backoffice/overrideDir.md">
+            
+                <span>
+            
+                    
+                    Overriding directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../backoffice/overrideSer.md">
+            
+                <span>
+            
+                    
+                    Overriding services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../plugins/">
+            
+                <a href="../plugins/">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../plugins/create.html">
+            
+                <a href="../plugins/create.html">
+            
+                    
+                    Creating a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../pages/">
+            
+                <a href="../pages/">
+            
+                    
+                    Pages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../pages/backoffice.html">
+            
+                <a href="../pages/backoffice.html">
+            
+                    
+                    Backoffice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../pages/standalone.html">
+            
+                <a href="../pages/standalone.html">
+            
+                    
+                    Standalone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../typebased/">
+            
+                <a href="../typebased/">
+            
+                    
+                    TypeBased
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../typebased/references.html">
+            
+                <a href="../typebased/references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../typebased/references_with_arrays.html">
+            
+                <a href="../typebased/references_with_arrays.html">
+            
+                    
+                    Arrays with References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../typebased/arrays.html">
+            
+                <a href="../typebased/arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.11.1" data-path="rest.html">
+            
+                <a href="rest.html">
+            
+                    
+                    Adding a new REST primitive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../howto/">
+            
+                <a href="../howto/">
+            
+                    
+                    Howto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Adding a new REST primitive</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="adding-a-new-rest-primitive-to-route-injector">Adding a new REST primitive to Route Injector</h1>
+<p>This documents how the validate primitive has been added to RI. New primitives can easily be added to the framework.</p>
+<h2 id="implementing-the-api">Implementing the API</h2>
+<p>In the folder /lib/engine/routeinjector/rest/ lay the different files that implement the REST primitives, typically one primitive per folder.
+We have copied the get.js file to validate.js and used it as a template. The basically contain the function that will be injected for each model for providing the REST primitive.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports.getByField = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Model</span>) </span>{
+
+     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+        <span class="hljs-comment">// This is the code to be executed when the rest primitive is called.</span>
+     }
+}
+</code></pre>
+<p>The exported function is renamed to validate and the following code is added to it. It gets all the _id of the documents in the database for the given folder, and uses an async map to call the validateItem function with this id. The results of the function are put in the map that it is filtered to remove the null elements, and after all the items are processed a json is sent to the browser. Notice that the log and statusCode libraries should be used as well the gConfig object can provide additional injected information in addition to the Mongoose Model passed to the function.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> gConfig = Model.injector();
+
+Model.find({},{id:<span class="hljs-number">1</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, results</span>) </span>{
+    <span class="hljs-keyword">if</span>(err) {
+        log.error(err);
+        res.statusCode = statusCode.InternalServerError();
+        res.json(err.message);
+        <span class="hljs-keyword">return</span> res.end();
+    }
+
+    <span class="hljs-keyword">async</span>.map(results, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb</span>) </span>{
+        validateItem(Model, item.get(<span class="hljs-string">&quot;_id&quot;</span>), cb);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, results</span>) </span>{
+        results = results.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">r</span>) </span>{ <span class="hljs-keyword">return</span> r!=<span class="hljs-literal">null</span>; });
+        res.json({count: results.length, data: results});
+        res.end();
+    });
+});
+</code></pre>
+<p>The validateItem retrieves a Mongoose document by the id and uses the mongoose method validate() to check if the document validates all the embedded rules. The result of this function is passed to the callback of the function.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validateItem</span>(<span class="hljs-params">Model, id, cb</span>) </span>{
+    Model.findOne({_id: id}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, r</span>) </span>{
+        <span class="hljs-keyword">if</span>(err) {
+            log.error(err);
+            res.statusCode = statusCode.InternalServerError();
+            res.json(err.message);
+            <span class="hljs-keyword">return</span> res.end();
+        }
+        r.validate(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+            <span class="hljs-keyword">if</span>(err) {
+                cb(<span class="hljs-literal">null</span>, {id: id, error: err});
+            } <span class="hljs-keyword">else</span> {
+                cb(<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>);
+            }
+        });
+    });
+}
+</code></pre>
+<p>The final result is:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Q = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;q&apos;</span>);
+<span class="hljs-keyword">var</span> statusCode = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;statusCode&apos;</span>);
+<span class="hljs-keyword">var</span> utils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../utils&apos;</span>);
+<span class="hljs-keyword">var</span> <span class="hljs-keyword">async</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;async&apos;</span>);
+
+<span class="hljs-keyword">var</span> injector = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../../&apos;</span>);
+<span class="hljs-keyword">var</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-keyword">var</span> log = injector.log;
+<span class="hljs-keyword">var</span> mongoose = injector.mongoose;
+
+<span class="hljs-built_in">module</span>.exports.validate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Model</span>) </span>{
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validateItem</span>(<span class="hljs-params">Model, id, cb</span>) </span>{
+          Model.findOne({_id: id}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, r</span>) </span>{
+              <span class="hljs-keyword">if</span>(err) {
+                log.error(err);
+                res.statusCode = statusCode.InternalServerError();
+                res.json(err.message);
+                <span class="hljs-keyword">return</span> res.end();
+              }
+              r.validate(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+                <span class="hljs-keyword">if</span>(err) {
+                    <span class="hljs-comment">//cb(null, {id: id, region: r.get(&quot;region&quot;), niceName: r.get(&quot;niceName&quot;), error: err});</span>
+                    cb(<span class="hljs-literal">null</span>, {id: id, error: err});
+                } <span class="hljs-keyword">else</span> {
+                    cb(<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>);
+                }
+              });
+          });
+        }
+
+        <span class="hljs-keyword">var</span> gConfig = Model.injector();
+
+        Model.find({},{id:<span class="hljs-number">1</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, results</span>) </span>{
+            <span class="hljs-keyword">if</span>(err) {
+                log.error(err);
+                res.statusCode = statusCode.InternalServerError();
+                res.json(err.message);
+                <span class="hljs-keyword">return</span> res.end();
+            }
+
+            <span class="hljs-keyword">async</span>.map(results, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, cb</span>) </span>{
+                validateItem(Model, item.get(<span class="hljs-string">&quot;_id&quot;</span>), cb);
+            }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, results</span>) </span>{
+                results = results.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">r</span>) </span>{ <span class="hljs-keyword">return</span> r!=<span class="hljs-literal">null</span>; });
+                res.json({count: results.length, data: results});
+                res.end();
+            });
+        });
+    };
+
+};
+</code></pre>
+<h2 id="making-it-injectable">Making it injectable</h2>
+<p>The previous code is functional but while not be injected automatically by RI. For adding this, the file /lib/engine/routeinjector/inject.js should be modified. The function routeMiddleware adds the diferent routes for each model. For example the following code is on charge of adding the import API:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (modelConf.import.disable != <span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> plural = modelConf.plural || path + <span class="hljs-string">&apos;s&apos;</span>;
+    log.debug(<span class="hljs-string">&quot;Inject route: import &quot;</span> + plural + <span class="hljs-string">&apos;/import&apos;</span>);
+    <span class="hljs-keyword">var</span> importMiddleware = routeMiddlewares(<span class="hljs-string">&quot;import&quot;</span>);
+    app.post(prefix + <span class="hljs-string">&apos;/&apos;</span> + plural + <span class="hljs-string">&apos;/import&apos;</span>, importMiddleware, importDocuments(Model));
+}
+</code></pre>
+<p>If the model configuration does no disable the import API the plural name is calculated and a middleware is added to the application object in the POST /<model>s/import route. Notice that also the optional importMiddleware are added to the route if present. </model></p>
+<p>Adding the same behaviour for our new API is easy:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span>(modelConf.validate.disable != <span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> plural = modelConf.plural || path + <span class="hljs-string">&apos;s&apos;</span>;
+    log.debug(<span class="hljs-string">&quot;Inject route: validate &quot;</span> + plural + <span class="hljs-string">&apos;/import&apos;</span>);
+    app.get(prefix + <span class="hljs-string">&apos;/&apos;</span> + plural + <span class="hljs-string">&apos;/validate&apos;</span>, validateDocuments(Model));
+}
+</code></pre>
+<p>validateDocument function is required at the beginning of the file with all the other rest APIs.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> getByField = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/get&apos;</span>).getByField;
+<span class="hljs-keyword">var</span> post = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/post&apos;</span>).post;
+<span class="hljs-keyword">var</span> putByField = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/put&apos;</span>).putByField;
+<span class="hljs-keyword">var</span> deleteByField = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/delete&apos;</span>).deleteByField;
+<span class="hljs-keyword">var</span> getNDocuments = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/search&apos;</span>).getNDocuments;
+<span class="hljs-keyword">var</span> getNDocumentsPost = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/search&apos;</span>).getNDocumentsPost;
+<span class="hljs-keyword">var</span> exportDocuments = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/export&apos;</span>).export;
+<span class="hljs-keyword">var</span> importDocuments = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/import&apos;</span>).import;
+<span class="hljs-keyword">var</span> validateDocuments = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./rest/validate.js&apos;</span>).validate;
+</code></pre>
+<p>TODO This API right now does not provide support for additional middlewares.</p>
+<h2 id="configurate-the-model-to-use-it">Configurate the model to use it</h2>
+<p>Finally, the models in the user application should instructed to inject the validate API. This is typically done in the <app>/models/<model>/injector.js file.</model></app></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> backoffice = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./backoffice&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+    id: <span class="hljs-string">&quot;_id&quot;</span>,
+    path: <span class="hljs-string">&quot;basic&quot;</span>,
+    plural: <span class="hljs-string">&quot;basics&quot;</span>,
+    displayField: <span class="hljs-string">&quot;niceName&quot;</span>,
+    extraDisplayFields: [<span class="hljs-string">&quot;array&quot;</span>,<span class="hljs-string">&quot;url&quot;</span>],
+    get: { },
+    post: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>]
+    },
+    put: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;admin&quot;</span>]
+    },
+    <span class="hljs-keyword">delete</span>: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>]
+    },
+    search: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>]
+    },
+    <span class="hljs-keyword">export</span>: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>]
+    },
+    <span class="hljs-keyword">import</span>: {
+        roles:[<span class="hljs-string">&quot;user&quot;</span>]
+    },
+    validate: {},
+    backoffice: backoffice,
+    form:{
+        items:[<span class="hljs-string">&apos;*&apos;</span>]
+    }
+};
+</code></pre>
+<p>Notice the &quot;validate: {}&quot; line that enables the validate API with default parameters.</p>
+<h2 id="adding-custom-id-and-sharding-management">Adding custom ID and sharding management</h2>
+<p>Given a Model, Model.injector() retrieves the injector configuration for the specific model. This configuration includes things like different ID for a Model or sharding keys. For this specific API it is interesting that in addition to the mongoose identifier, if the user has specified an additional identifier or sharding key this information is shown also in the response JSON for easier human understanding.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> config = Model.injector();
+<span class="hljs-keyword">var</span> additionalId = (config.id != <span class="hljs-string">&apos;_id&apos;</span>) ? config.id : <span class="hljs-literal">undefined</span>;
+<span class="hljs-keyword">var</span> shardKey = (config.shard &amp;&amp; config.shard.shardKey) ? config.shard.shardKey : <span class="hljs-literal">undefined</span>;
+</code></pre>
+<p>The previous code gets the configuration and get the additional ID and sharding key. Take into account that this data is always the same for the same Model, so instead of calculating them for each request it is better to pre-calculate it outside the lambda for improving the performance:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports.validate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Model</span>) </span>{
+
+    <span class="hljs-comment">//HERE is faster</span>
+    <span class="hljs-keyword">var</span> config = Model.injector();
+    <span class="hljs-keyword">var</span> additionalId = (config.id != <span class="hljs-string">&apos;_id&apos;</span>) ? config.id : <span class="hljs-literal">undefined</span>;
+    <span class="hljs-keyword">var</span> shardKey = (config.shard &amp;&amp; config.shard.shardKey) ? config.shard.shardKey : <span class="hljs-literal">undefined</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+        <span class="hljs-comment">//Than not HERE</span>
+        ...
+    }
+};
+</code></pre>
+<p>Finally we use this variables for adding the required information to the response JSON. Notice that the mongoose document can be also be accessed through the [ ] operator, i.e in our code r[additionalId].</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validateItem</span>(<span class="hljs-params">Model, id, cb</span>) </span>{
+    Model.findOne({_id: id}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, r</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            log.error(err);
+            res.statusCode = statusCode.InternalServerError();
+            res.json(err.message);
+            <span class="hljs-keyword">return</span> res.end();
+        }
+        r.validate(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+            <span class="hljs-keyword">if</span> (err) {
+                err.stack = <span class="hljs-literal">undefined</span>;
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> err.errors) {
+                    err.errors[i].stack = <span class="hljs-literal">undefined</span>;
+                    err.errors[i].properties = <span class="hljs-literal">undefined</span>;
+                }
+                <span class="hljs-keyword">var</span> o = {id: id};
+                <span class="hljs-keyword">if</span>(additionalId) {
+                    o[additionalId] = r[additionalId];
+                }
+                <span class="hljs-keyword">if</span>(shardKey) {
+                    o[shardKey] = r[shardKey];
+                }
+                o.error = err;
+                cb(<span class="hljs-literal">null</span>, o);
+            } <span class="hljs-keyword">else</span> {
+                cb(<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>);
+            }
+        });
+    });
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Development">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../howto/" class="navigation navigation-next " aria-label="Next page: Howto">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Adding a new REST primitive","level":"1.11.1","depth":2,"next":{"title":"Howto","level":"1.12","depth":1,"path":"howto/README.md","ref":"howto/README.md","articles":[]},"previous":{"title":"Development","level":"1.11","depth":1,"path":"devel/README.md","ref":"devel/README.md","articles":[{"title":"Adding a new REST primitive","level":"1.11.1","depth":2,"path":"devel/rest.md","ref":"devel/rest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"devel/rest.md","mtime":"2019-09-27T11:52:06.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T11:52:56.608Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

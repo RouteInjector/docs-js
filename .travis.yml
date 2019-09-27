@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+branches:
+  except:
+  - gh-pages
+before_install:
+- npm -g install gitbook-cli
+script:
+- "./build.sh"
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  commiter-from-gh: true,
+  local-dir: ./gh-pages
+  on:
+    branch: master
