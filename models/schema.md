@@ -122,6 +122,7 @@ The available attributes are:
 | [denormalize](./denormalize.md)   | Specifies how to denormalize the field (copy values from the referenced one)  | Mixed                              |
 | [propagate](./denormalize.md)     | Specifies if changes in referenced fields must be propagated to this field.   | Mixed                              |
 | [dependsOn](./dependencies.md)    | Specifies how to udate the field when a related field is modified             | All                                |
+| [prefix](#url)    | When using `format:url` specifies the initial part of the URL                                 | String (url)                          |
 
 TODO What's the correct max or maxValue ???
 
@@ -146,10 +147,16 @@ TODO: Example
 
 ### <a name="format"></a>format
 
-The format attributes allow to specify specific visualizations for general types like string or number. The allowed values (without any additional plugin) are: [html](#html), [textarea](#textarea), [rating](#rating), [time-seconds](#time-seconds) and [button](#button).
+The format attributes allow to specify specific visualizations for general types like string or number. The allowed values (without any additional plugin) are: [url](#url), [html](#html), [textarea](#textarea), [rating](#rating), [time-seconds](#time-seconds) and [button](#button).
 
 ```javascript
 name: {type: String, format: <Attribute>}
+```
+#### <a name="url"></a>html
+This format allows to render a string field as an URL link on the backoffice list. The prefix is added to the string to generate the URL, if the string value is `my-post` and the `prefix` is `/` the URL of the link will be `/my-post`.
+
+```javascript
+name: {type: String, format: 'url', prefix: '/'}
 ```
 
 #### <a name="html"></a>html
